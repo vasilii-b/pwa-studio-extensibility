@@ -1,0 +1,32 @@
+{
+  "name": "@vasilii-burlacu/pwa-studio-extensibility",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Vasilii Burlacu",
+    "email": "v.burlacu@atwix.com",
+    "url": "https://www.linkedin.com/in/burlacu-vasilii/"
+  },
+  "contributors": [
+    {
+      "name": "Chris Brabender",
+      "email": "c.brabender@gmail.com",
+      "url": "https://twitter.com/brabs13"
+    }
+  ],
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "pwa-studio": {
+    "targets": {
+      "intercept": "intercept"
+    }
+  },
+  "peerDependencies": {
+    "@magento/pwa-buildpack": "=>9.0.0",
+    "@magento/venia-ui": "=>7.0.0",
+    "react": "=>17.0.2"
+  },
+  "dependencies": {
+    "babel-plugin-require-context-hook": "=>1.0.0",
+    "globby": "=>11.0.3"
+  }
+}
