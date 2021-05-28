@@ -21,9 +21,9 @@
     }
   },
   "peerDependencies": {
-    "@magento/pwa-buildpack": "=>9.0.0",
-    "@magento/venia-ui": "^7.0.0",
-    "react": "^17.0.2"
+    "@magento/pwa-buildpack": "~9.0.0",
+    "@magento/venia-ui": "~7.0.0",
+    "react": "~17.0.1"
   },
   "dependencies": {
     "babel-plugin-require-context-hook": "^1.0.0",
