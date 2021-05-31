@@ -16,7 +16,10 @@ See below how to apply and use.
 ## Installation
 
 1. Add the package as a dependency to the project.
-`yarn add vasilii-b/pwa-studio-extensibility`
+
+```sh
+yarn add https://github.com/vasilii-b/pwa-studio-extensibility#1.0.1
+````
    
 2. Adjust the `local-intercept.js` file to make the package's changes apply on
 the project
