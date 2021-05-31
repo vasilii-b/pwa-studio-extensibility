@@ -33,11 +33,11 @@ module.exports = targetables => {
     const globby = require('globby');
     const fs = require('fs');
     const path = require('path');
-    const magentoPath = path.resolve(__dirname, '..', '..', '..', 'node_modules', '@magento');
+    const magentoPath = path.resolve(__dirname, '..', '..', '..', '@magento');
 
     (async () => {
         // Load CSS files from src/components
-        const componentsPath = path.resolve(__dirname, '..', '..', '..', 'src', 'components');
+        const componentsPath = path.resolve(__dirname, '..', '..', '..', '..', 'src', 'components');
         const paths = await globby([
             componentsPath,
         ], {
