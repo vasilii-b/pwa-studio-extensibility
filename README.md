@@ -55,11 +55,11 @@ styles are located in
 `@magento/venia-ui/lib/components/Header/header.css`.
 
 Create the file 
-`{project-root}/src/components/Header/header.extend.css` and add inside it the changes
+`{project-root}/src/components/Header/header.css` and add inside it the changes
 you need to tweak Venia's default look&feel.
 
 ```css
-/* {project-root}/src/components/Header/header.extend.css */
+/* {project-root}/src/components/Header/header.css */
 
 .toolbar {
   composes: toolbar from '~@magento/venia-ui/lib/components/Header/header.css';
