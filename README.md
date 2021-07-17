@@ -18,7 +18,7 @@ See below how to apply and use.
 1. Add the package as a dependency to the project.
 
 ```sh
-yarn add https://github.com/vasilii-b/pwa-studio-extensibility#1.0.1
+yarn add https://github.com/vasilii-b/pwa-studio-extensibility#1.1.0
 ````
    
 2. Adjust the `local-intercept.js` file to make the package's changes apply on
@@ -36,6 +36,24 @@ module.exports = localIntercept;
 ```
 
 3. Proceed with adjusting styles and components. See [Usage](#usage)
+
+## Options
+
+Starting with v.1.1.0 it's possible to adjust styles using `.scss` files instead
+of `.css`.
+
+This means you can use SCSS Modules to customise Venia's look&feel.
+
+```js
+addExtensibilityTargetables(
+    targetables,
+    {
+        styles: {
+            useScssOverCss: true
+        }
+    }
+);
+```
 
 ## Usage
 
