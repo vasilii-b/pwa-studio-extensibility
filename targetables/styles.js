@@ -29,7 +29,9 @@
  *
  * @param targetables
  */
-module.exports = targetables => {
+module.exports = (targetables, settings) => {
+    const { useScssOverCss = false } = settings || {};
+    const extension = useScssOverCss ? 'scss' : 'css';
     const globby = require('globby');
     const fs = require('fs');
     const path = require('path');
@@ -42,15 +44,23 @@ module.exports = targetables => {
             componentsPath,
         ], {
             expandDirectories: {
-                extensions: ['css']
+                extensions: [extension]
             }
         });
 
         paths.forEach((myPath) => {
-            const absolutePath = myPath.replace(
+            let absolutePath = myPath.replace(
                 componentsPath,
                 path.resolve(magentoPath, 'venia-ui', 'lib', 'components')
             );
+
+            if (useScssOverCss) {
+                /**
+                 * need to change the extension from SCSS to CSS
+                 * because we target the CSS files in Venia.
+                 */
+                absolutePath = absolutePath.replace('.scss', '.css');
+            }
 
            // Identify if local component maps to 'venia-ui' component
             fs.stat(absolutePath, (err, stat) => {
